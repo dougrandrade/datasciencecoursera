@@ -7,7 +7,9 @@
 x <- 1
 print(x) # explicit printing
 x # auto-printing
+
 class(x)
+
 
 msg <- 'Hello'
 msg
@@ -24,7 +26,7 @@ x <- c('a', 'b', 'c') # character
 x <- 9:29 # integer
 x <- c(1+0i, 2+4i) # complex
 
-x <- vector('numeric, length = 10') # using the vector function
+x <- vector('numeric', length = 10) # using the vector function
 x
 
 y <- c(1.7, 'a') # character
@@ -189,7 +191,6 @@ x[u] # using logicals to subset
 x <- list(2, "a", "b", TRUE)
 x[[2]]
 
-
 x <- list(foo = 1:4, bar = 0.6)
 x[1]
 
@@ -220,7 +221,7 @@ x[2, 1]
 x[1,]
 x[,2]
 
-x< - matrix[1:6, 2, 3]
+x< - matrix(1:6, 2, 3)
 x
 x[1, 2]
 x[1, 2, drop = F]
@@ -254,6 +255,7 @@ good <- complete.cases(airquality)
 good
 airquality[good, ][1:6, ]
 
+
 ## practice
 x <- 1:4
 y <- 2:3
@@ -278,3 +280,4 @@ mean(z$Temp)
 
 u <- subset(x, Month == 5)
 max(u$Ozone[!is.na(u['Ozone'])])
+
